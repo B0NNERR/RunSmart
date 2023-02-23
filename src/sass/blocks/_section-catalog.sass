@@ -1,0 +1,152 @@
+.section-catalog
+    padding-bottom: 100px
+    background-color: $sections__bg-color
+    &__list
+        padding: 0
+        margin: 0
+        margin-top: 70px
+        display: flex
+        justify-content: center
+        list-style-type: none
+    &__item
+        font-family: $font-family__300
+        font-size: 18px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 220px
+        height: 50px
+        border: 2px solid #d0d0d0
+        text-transform: uppercase
+        color: #6B6B6B
+        transform: skewX(-25deg)
+        transition: 0.2s box-shadow
+        cursor: pointer
+        &:not(:last-child)
+            margin-right: 10px
+        &:hover
+            box-shadow: 0 0 20px 0px $main-color
+            border: none
+        div
+            transform: skewX(25deg)
+        &_active
+            border-color: $main-color
+            background-color: $main-color
+            color: #fff
+    &__content
+        margin-top: 50px
+        display: none
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 20px
+        &_active
+            display: flex
+    &__card
+        max-width: 300px
+        padding: 20px
+        background-color: #fff
+        box-shadow: 0 0 10px #ccc
+        overflow: hidden
+        img
+            max-width: 100%
+            height: 200px
+            display: block
+            margin: 0 auto
+        &-title
+            font-family: $font-family__900
+            font-size: 16px
+            text-align: center
+            margin-top: 15px
+            color: $text-color__first
+        &-subtitle
+            font-family: $font-family__500
+            font-size: 14px
+            text-align: center
+            margin-top: 15px
+            color: $text-color__first
+        &-more
+            text-align: center
+        &-link
+            margin-top: 10px
+            font-family: $font-family__500
+            font-size: 14px
+            text-transform: uppercase
+            text-decoration: underline
+            color: $main-color
+            &:hover
+                color: $main-color
+        &-footer
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &-old-price
+                font-family: $font-family__100
+                font-size: 14px
+                color: #555
+                text-decoration: line-through
+            &-new-price
+                font-family: $font-family__700
+                font-size: 20px
+                color: #050505
+        hr
+            margin-top: 17px
+            margin-bottom: 17px
+            padding: 0
+            border: none
+            border-top: 1px solid #E8E8E8
+    &__wrapper
+        display: flex
+        width: calc(200% + 40px)
+    &__card-content
+        width: 50%
+        margin-right: 0px
+        transform: translateX(-100%)
+        transition-duration: 0.5s
+        transition-property: margin-right, margin-left, transform
+        &_active
+            margin-right: 20px
+            transform: translate(0%)
+    &__list-description
+        position: relative
+        padding-right: 20px
+        padding-left: 19px
+        margin-bottom: 0
+        width: 50%
+        margin-left: 20px
+        transform: translateX(0%)
+        list-style-type: none
+        transition-duration: 0.5s
+        transition-property: margin-right, margin-left, transform
+        &_active
+            margin-left: 0px
+            transform: translate(-100%)
+        li
+            position: relative
+            font-family: $font-family__100
+            font-weight: 700
+            font-size: 14px
+            line-height: 1.5
+            color: #555555
+            &::before
+                content: ''
+                position: absolute
+                width: 5px
+                height: 5px
+                background-color: $main-color
+                left: -14px
+                top: 7px               
+            &:not(:last-child)
+                margin-bottom: 5px
+        &-link
+            font-family: $font-family__500
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(calc( -50% - 19px ))
+            display: block
+            color: $main-color
+            font-size: 14px
+            text-decoration: underline
+            text-transform: uppercase
+            &:hover
+                color: $main-color

@@ -1,0 +1,60 @@
+.overlay
+    display: none
+    position: fixed
+    width: 100%
+    top: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.56)
+.modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: #F2F2F2
+    padding: 38px 40px 40px 40px
+    &__close
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding-bottom: 10px
+        height: 30px
+        width: 30px
+        font-size: 41px
+        position: absolute
+        bottom: -50px
+        left: 50%
+        transform: translateX(-50%)
+        color: #fff
+        cursor: pointer
+        background-color: $main-color
+        border-radius: 50%
+        &:hover
+            background-color: #fff
+            color: $main-color
+    &__subtitle
+        font-family: $font-family__700
+        font-size: 18px
+        line-height: 1
+        text-align: center
+        color: $text-color__first
+    &__description
+        font-family: $font-family__500
+        font-size: 14px
+        margin-top: 10px
+        line-height: 1
+        text-align: center
+        color: $text-color__first
+    .feed-form
+        margin-left: auto
+        margin-right: auto
+    input
+        width: 100%
+    .validate-error
+        border: 1px solid $main-color
+    label.validate-error
+        text-align: center
+        color: $main-color
+        border: none
+#consultation, #order, #thanks
+    display: none

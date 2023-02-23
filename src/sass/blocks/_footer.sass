@@ -1,0 +1,55 @@
+.footer
+    position: relative
+    min-height: 630px
+    display: flex
+    flex-direction: column
+    background-color: $sections__bg-color
+    &__map
+        z-index: 1
+    &__info
+        position: absolute
+        padding: 50px
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: $main-color
+        text-align: center
+        z-index: 2
+    &__address
+        margin: 0
+        font-family: $font-family__300
+        font-size: 20px
+        line-height: 1
+        color: #fff
+    &__telephone
+        display: inline-block
+        font-family: $font-family__700
+        font-size: 20px
+        margin-top: 36px
+        color: #fff
+        &:hover
+            color: #fff
+    &__social-links
+        display: flex
+        justify-content: center
+        margin: 0
+        padding: 0
+        margin-top: 36px
+        list-style-type: none
+        &-item:not(:last-child)
+            margin-right: 30px
+    &__social-link
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 52px
+        height: 52px
+        border: 2px solid #fff
+        border-radius: 50%
+        svg
+            width: 27px
+            height: 27px
+        &:hover
+            background-color: #fff
+            svg
+                fill: $main-color

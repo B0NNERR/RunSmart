@@ -1,0 +1,25 @@
+.block-up
+    display: none
+    position: fixed
+    bottom: 30px
+    right: 30px
+    width: 52px
+    height: 52px
+    border-radius: 50%
+    background-color: #fff
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2)
+    &::after, &::before
+        content: ''
+        position: absolute
+        height: 3px
+        width: 15px
+        border-radius: 10px
+        background-color: $main-color
+    &::after
+        top: 50%
+        left: 50%
+        transform: translate(calc( -50% - 5px ), -50%) rotate(-45deg)
+    &::before
+        top: 50%
+        left: 50%
+        transform: translate(calc( -50% + 4px ), -50%) rotate(45deg) 
