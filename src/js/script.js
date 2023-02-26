@@ -132,7 +132,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  const smoothLinks = document.querySelectorAll('a[href^="#up"]');
   for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener("click", function (e) {
       e.preventDefault();
